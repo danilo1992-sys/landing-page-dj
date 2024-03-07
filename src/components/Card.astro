@@ -1,20 +1,40 @@
 ---
-const CUMPLEAÑOS =[
+const EVENTOS =[
     {
     title:"Cumpleaños de 15",
-    
+    description:"Con iluminacion y sonido de ultima  generacion, Hacer realidad tu noche magíca ",
+    image:"../../public/OLD Galeria 15 años _ bonof (1).jpeg"
+    },
+    {
+    title:"Bodas",
+    description:"Con iluminacion y sonido de ultima generacion, Hacer realidad tu noche magíca",
+    image:"../../public/boda.jpeg"
+    },
+    {
+    title:"Eventos sociales",
+    description:"Con iluminacion y sonido de ultima generacion, Hacer realidad tu noche magíca",
+    image:"https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+    },
+    {
+    title:"Bautisos",
+    description:"Con iluminacion y sonido de ultima generacion, Hacer realidad tu noche magíca",
+    image:"https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
     },
 ]
 ---
-
-
-
-
-<div class="card card-side bg-base-100 shadow-xl fixed border z-20  ">
-    <figure><img src="../../public/DJ_Monogram_Logo-removebg-preview 1dj.png" alt="Movie"/></figure>
-    <div class="card-body slate-600 border-l bg-neutral-800/50">
-        <h2 class="card-title text-stone-200 rounded-r-lg">New movie is released!</h2>
-            <div class="card-actions justify-end ">
-            </div>
+{
+EVENTOS.map(({title, description, image}) =>(
+    <div class="card lg:card-side bg-base-100 shadow-xl border columns-2xs ">
+        <figure><img 
+            loading="lazy"
+            src={image} 
+            alt="Album"/></figure>
+        <div class="px-10 border-l">
+        <h2 class="card-title text-slate-200 py-2 " >{title}</h2>
+        <p class="text-slate-200">{description}</p>
+        <div class="card-actions justify-center">
+        </div>
         </div>
     </div>
+    ))
+}
